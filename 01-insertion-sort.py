@@ -3,8 +3,8 @@
 # space complexity: O(1) -- Done in place
 def insertion_sort(array):
     for i in range(1,len(array)): # We start with an assumption that the first element is sorted and at the right place
-        j =i
-        while j > 0 and array[j] < array[j-1]: # 
+        j = i
+        while j > 0 and array[j] < array[j-1]: # We loop back and insert the element at the right place
             swap(j , j-1,array)  # swap number in the two indices
             j-=1
     return array
