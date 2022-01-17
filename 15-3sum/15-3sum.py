@@ -11,7 +11,7 @@ class Solution:
             l,r = i+1, len(nums)-1 
             while l<r:
                 threesum = a + nums[l] + nums[r]
-                if threesum > 0: # if the sum < 0 then the expected sum has to be with an element in the left as this is sorted
+                if threesum > 0: # if the sum > 0 then the expected sum has to be with an element in the left as this is sorted
                     r-=1
                 elif threesum < 0: # if the sum < 0 then the expected sum has to be with an element in the right as this is sorted
                     l+=1
