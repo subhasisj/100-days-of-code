@@ -1,5 +1,10 @@
 class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
+        """
+        We maintain a count of chars in the sliding window
+        if the sliding contains allows more number of replacements than k
+        then we move the left pointer and decrement and Count and check again
+        """
         char_counts = {}
         l = 0
         res = 0
