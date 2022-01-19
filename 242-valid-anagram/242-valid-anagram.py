@@ -10,9 +10,11 @@ class Solution:
                 counts_t[t[i]]+=1
             else:
                 counts_t[t[i]] = 1
-            if s[i] in counts_s:
-                counts_s[s[i]]+=1
-            else:
-                counts_s[s[i]] = 1
+            # if s[i] in counts_s:
+            #     counts_s[s[i]]+=1
+            # else:
+            #     counts_s[s[i]] = 1
+                
+            counts_s[s[i]] = 1 + counts_s.get(s[i],0)
         return counts_t == counts_s
                
